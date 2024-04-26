@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Table App</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/themes/smoothness/jquery-ui.css">
+</head>
+<body>
+<div id="app">
+  <div class="panel">
+    <div class="addColumn">
+      <form class='form-add-column'>
+        <h2>Добавления столбца</h2>
+        <div class="form-container">
+          <div class="form-item">
+            <label for="name">Название столбца</label>
+            <input type="text" name='name' required>
+          </div>
+          <div class="form-item">
+          <label for="type">тип столбца</label>
+            <select name="type"  required defaultValue={type} >
+              <option value="string" >cтрока</option>
+              <option value="number" >число</option>
+              <option value="boolean" >логическое значение</option>
+            </select>
+          </div>
+          <button>Создать</button>
+        </div>
+      </form>
+    </div>
+    <div class="addRows">
+      <form class='form-add-row'>
+        <h2>Добавления ряда</h2>
+        <div class="form-container">
+
+        </div>
+        <button>Создать</button>
+      </form>
+
+    </div>
+
+
+
+  </div>
+  <div class="remove-container" >
+    <h2>Удалить колонку</h2>
+    <form class="remove-content" id="removeColumn">
+      
+    </form>
+    <button type="submit" form="removeColumn" id="removeBtn">удалить</button>
+</div>
+<div class="filter-container" >
+  <h2>Скрыть колонку</h2>
+  <form class="filter-content" id="filterColumn">
+    
+  </form>
+  <button type="submit" form="filterColumn" id="filterBtn">Применить</button>
+</div>
+
+  <div class="container_search">
+      <div class="search-item">
+        <h2>Поиск по колонки</h2>
+        <div class="form-item">
+          <input type="text" class="search" disabled>
+          <select name="searchColumn" id="columnSearch">
+            <option value=""></option>
+          </select>
+        </div>
+      </div>
+      <div class="search-item">
+        <h2>Поиск по всем колонкам</h2>
+        <div class="form-item">
+          <input type="text" class="searchs">
+        </div>
+      </div>
+  </div>
+  
+    
+  </div>
+
+  <table id="table"></table>
+
+  <div class="dataBtnContainer">
+    <div class="dataBtnContainer-item">
+      <input type="file" id="fileInputExport" onchange="readFileImport(this)" hidden>
+      <button id="exportBtn">Выгрузить </button>
+    </div>
+    <button id="importBtn">Импортировать</button>
+    
+  </div>
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>

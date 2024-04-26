@@ -1,0 +1,4 @@
+{
+  "data":[{"djet":"2","djet1":"3"},{"djet":"2","djet1":"3"},{"djet":"2","djet1":"3"}],
+  "columns": [{"name":"djet","type":"string"},{"name":"djet1","type":"string"}]
+}
